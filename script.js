@@ -18,6 +18,18 @@
     });
   }
 
+  var hero = document.querySelector(".hero");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (hero && !reduceMotion && window.matchMedia("(hover: hover)").matches) {
+    hero.addEventListener("mousemove", function (e) {
+      var rect = hero.getBoundingClientRect();
+      var mx = ((e.clientX - rect.left) / rect.width) * 100;
+      var my = ((e.clientY - rect.top) / rect.height) * 100;
+      hero.style.setProperty("--mx", mx + "%");
+      hero.style.setProperty("--my", my + "%");
+    });
+  }
+
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && reveals.length) {
     var io = new IntersectionObserver(
