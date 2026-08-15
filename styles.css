@@ -177,8 +177,6 @@ button { font: inherit; }
   opacity: 0.5;
 }
 .hero-inner { position: relative; z-index: 1; text-align: center; display: flex; flex-direction: column; align-items: center; }
-.hero-mark { margin: 0 0 34px; line-height: 0; }
-.hero-mark .logo-svg { width: 128px; height: auto; color: var(--text); margin: 0 auto; }
 .eyebrow {
   font-family: var(--font-body);
   font-weight: 700; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
