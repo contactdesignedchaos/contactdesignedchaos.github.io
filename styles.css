@@ -231,7 +231,7 @@ button { font: inherit; }
 
 /* ---------- Portfolio ---------- */
 .portfolio { padding: 130px 0; border-bottom: 1px solid var(--line); }
-.portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+.portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 .portfolio-card { display: flex; flex-direction: column; text-align: left; position: relative; background: var(--bg); padding: 34px; }
 .portfolio-card:hover { background: var(--bg-raised); }
 .portfolio-icon { width: 52px; height: 52px; margin-bottom: 24px; border-radius: var(--radius); }
@@ -241,10 +241,28 @@ button { font: inherit; }
   margin-top: 24px; font-weight: 700; color: var(--accent); font-size: 0.85rem;
   text-transform: uppercase; letter-spacing: 0.06em;
 }
-.portfolio-card-next { opacity: 0.55; }
-.portfolio-card-next:hover { background: var(--bg); }
-.portfolio-next-body h3 { color: var(--muted); }
-.portfolio-next-body p { color: var(--muted-dim); }
+
+.gallery-head { max-width: 640px; margin: 90px auto 40px; text-align: center; }
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.gallery-item {
+  margin: 0; position: relative; overflow: hidden; background: var(--bg-raised);
+  border: 1px solid var(--line); aspect-ratio: 1 / 1;
+}
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: contain; padding: 18px;
+  transition: transform 0.35s ease;
+}
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-item figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 14px;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.03em;
+  background: linear-gradient(180deg, transparent, var(--bg) 85%);
+  color: var(--text); opacity: 0; transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.gallery-item:hover figcaption { opacity: 1; transform: translateY(0); }
 
 /* ---------- Utilities ---------- */
 .utilities { padding: 130px 0; }
@@ -308,6 +326,7 @@ button { font: inherit; }
 @media (max-width: 900px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .util-body { grid-template-columns: 1fr; gap: 32px; }
 }
 
@@ -326,6 +345,7 @@ button { font: inherit; }
   .hero { padding: 120px 0 90px; }
   .services-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .util-card { padding: 30px; }
   .download-grid { grid-template-columns: 1fr; }
   .about-text { font-size: 1.3rem; }
