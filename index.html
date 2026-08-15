@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
   // Applied before first paint so a saved "light" choice never flashes
@@ -149,8 +149,11 @@
 
   <section class="hero">
     <div class="wrap hero-inner">
+      <div class="hero-mark reveal">
+        <svg class="logo-svg" viewBox="48.25 223.85 286.66 80.25" role="img" aria-label="Chaos Designs"><use href="#logo-wordmark"></use></svg>
+      </div>
       <p class="eyebrow reveal">Independent software &amp; design studio</p>
-      <h1 class="hero-logo reveal"><svg class="logo-svg" viewBox="48.25 223.85 286.66 80.25" role="img" aria-label="Chaos Designs"><use href="#logo-wordmark"></use></svg></h1>
+      <h1 class="hero-title reveal">Hello, we're<br><em>Chaos Designs.</em></h1>
       <p class="hero-sub reveal">We design and build small, sharp software — clean interfaces, honest tools,
         and the occasional big idea. No bloat, no accounts you don't need, no nonsense.</p>
       <div class="hero-actions reveal">
@@ -161,13 +164,35 @@
   </section>
 
   <section class="about" id="about">
-    <div class="wrap about-inner reveal">
-      <p class="about-text">
+    <div class="wrap about-inner">
+      <p class="about-text reveal">
         Chaos Designs is a small, independent studio. We design visual identities and build
         cross-platform software from a single codebase — then ship it as free, practical tools
         whenever we can. Everything we make is judged by one question: does it actually help,
         or is it just noise?
       </p>
+      <div class="grid process-grid">
+        <div class="process-step reveal">
+          <span class="process-num">01</span>
+          <h3>Discover</h3>
+          <p>Start from the actual problem, not the pitch — what someone needs to do, and what's in their way.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">02</span>
+          <h3>Design</h3>
+          <p>Interfaces and identities worked out on paper first, so the pixels only have one job: get out of the way.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">03</span>
+          <h3>Build</h3>
+          <p>One codebase, every platform. Flutter for the apps, plain HTML and CSS for the web — nothing heavier than it needs to be.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">04</span>
+          <h3>Ship</h3>
+          <p>Automated builds and a real release process, so shipping an update is routine, not an event.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -213,7 +238,7 @@
   <section class="portfolio" id="portfolio">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker">Selected work</p>
+        <p class="kicker">Featured work</p>
         <h2>Portfolio</h2>
       </div>
       <div class="grid portfolio-grid">
@@ -347,6 +372,27 @@
           </div>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="wrap stats-grid reveal">
+      <div class="stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Apps shipped</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">5</span>
+        <span class="stat-label">Platforms per app</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">6</span>
+        <span class="stat-label">Illustrations in the gallery</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">0</span>
+        <span class="stat-label">Accounts required</span>
+      </div>
     </div>
   </section>
 
