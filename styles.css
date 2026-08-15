@@ -110,14 +110,10 @@ button { font: inherit; }
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 
-.wordmark {
-  font-family: "Comfortaa", var(--font-display), sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--text);
-  display: inline-block;
-}
-.brand-mark { font-size: 1.15rem; }
+.logo-svg { display: block; overflow: visible; }
+.wm-ink { fill: currentColor; }
+.wm-hole { fill: var(--bg); transition: fill 0.25s ease; }
+.brand-mark { height: 22px; width: auto; color: var(--text); }
 
 .header-actions { display: flex; align-items: center; gap: 6px; }
 .theme-toggle {
@@ -184,12 +180,8 @@ button { font: inherit; }
   font-weight: 700; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 28px;
 }
-.hero-logo {
-  font-size: clamp(2.6rem, 8vw, 5.5rem);
-  line-height: 1.05;
-  margin-bottom: 30px;
-  max-width: 16ch;
-}
+.hero-logo { margin: 0 0 30px; line-height: 0; }
+.hero-logo .logo-svg { width: min(560px, 78vw); height: auto; color: var(--text); margin: 0 auto; }
 .hero-sub {
   max-width: 600px; font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   color: var(--muted); margin-bottom: 44px;
@@ -299,7 +291,7 @@ button { font: inherit; }
 /* ---------- Footer ---------- */
 .site-footer { padding: 40px 0; border-top: 1px solid var(--line); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.footer-mark { font-size: 0.85rem; opacity: 0.55; }
+.footer-mark { height: 15px; width: auto; color: var(--text); opacity: 0.55; }
 .footer-inner p { color: var(--muted-dim); font-size: 0.82rem; }
 
 /* ---------- Reveal-on-scroll ---------- */
