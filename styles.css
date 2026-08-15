@@ -301,9 +301,6 @@ button { font: inherit; }
 .dl-btn:hover { background: var(--accent); color: var(--bg); }
 .dl-btn:hover .dl-file { color: var(--bg); opacity: 0.7; }
 .dl-file { color: var(--muted); font-weight: 500; font-size: 0.82rem; }
-.dl-btn-pending { color: var(--muted-dim); cursor: default; background: var(--bg); }
-.dl-btn-pending:hover { background: var(--bg); color: var(--muted-dim); }
-.pending-note { font-size: 0.85rem; color: var(--muted-dim); margin-top: 4px; }
 
 /* ---------- Contact ---------- */
 .contact {
