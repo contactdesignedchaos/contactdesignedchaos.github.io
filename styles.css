@@ -111,14 +111,9 @@ button { font: inherit; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 
 .logo-svg { display: block; overflow: visible; }
-/* Opacity tiers reproduce the source's anti-aliased soft edge — lightest
-   (barely-there fringe) through wm-t5 (solid core) — as currentColor, so
-   it adapts to either theme instead of needing a background-matched cutout. */
-.wm-t1 { fill: currentColor; fill-opacity: 0.20; }
-.wm-t2 { fill: currentColor; fill-opacity: 0.42; }
-.wm-t3 { fill: currentColor; fill-opacity: 0.65; }
-.wm-t4 { fill: currentColor; fill-opacity: 0.85; }
-.wm-t5 { fill: currentColor; fill-opacity: 1; }
+/* Solid currentColor fill so the wordmark adapts to either theme and stays
+   crisp and legible at the small nav/footer sizes, not just the hero size. */
+.wm-t1, .wm-t2, .wm-t3, .wm-t4, .wm-t5 { fill: currentColor; fill-opacity: 1; }
 .brand-mark { height: 22px; width: auto; color: var(--text); }
 
 .header-actions { display: flex; align-items: center; gap: 6px; }
@@ -248,21 +243,31 @@ button { font: inherit; }
 }
 .gallery-item {
   margin: 0; position: relative; overflow: hidden; background: var(--bg-raised);
-  border: 1px solid var(--line); aspect-ratio: 1 / 1;
+  border: 1px solid var(--line); aspect-ratio: 1 / 1; display: block; width: 100%;
+  padding: 0; cursor: pointer; font: inherit; color: inherit;
+  -webkit-appearance: none; appearance: none;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
+.gallery-item:hover,
+.gallery-item:focus-visible { background: var(--surface); border-color: var(--accent); }
+.gallery-caption {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  padding: 20px; text-align: center; font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.04em; color: var(--muted);
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus-visible .gallery-caption { color: var(--accent); }
 .gallery-item img {
   width: 100%; height: 100%; object-fit: contain; padding: 18px;
-  transition: transform 0.35s ease;
+  position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease;
 }
-.gallery-item:hover img { transform: scale(1.06); }
-.gallery-item figcaption {
-  position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 14px;
-  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.03em;
+.gallery-item.is-revealed img { opacity: 1; }
+.gallery-item.is-revealed .gallery-caption {
+  inset: auto 0 0 0; padding: 10px 14px; justify-content: flex-start;
   background: linear-gradient(180deg, transparent, var(--bg) 85%);
-  color: var(--text); opacity: 0; transform: translateY(6px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  color: var(--text);
 }
-.gallery-item:hover figcaption { opacity: 1; transform: translateY(0); }
 
 /* ---------- Utilities ---------- */
 .utilities { padding: 130px 0; }

@@ -51,6 +51,17 @@
     });
   }
 
+  document.querySelectorAll(".gallery-item").forEach(function (item) {
+    item.addEventListener("click", function () {
+      if (item.classList.contains("is-revealed")) return;
+      var img = document.createElement("img");
+      img.src = item.getAttribute("data-src");
+      img.alt = item.getAttribute("data-alt") || "";
+      item.appendChild(img);
+      item.classList.add("is-revealed");
+    });
+  });
+
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && reveals.length) {
     var io = new IntersectionObserver(
