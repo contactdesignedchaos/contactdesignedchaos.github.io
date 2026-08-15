@@ -111,8 +111,14 @@ button { font: inherit; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 
 .logo-svg { display: block; overflow: visible; }
-.wm-ink { fill: currentColor; }
-.wm-hole { fill: var(--bg); transition: fill 0.25s ease; }
+/* Opacity tiers reproduce the source's anti-aliased soft edge — lightest
+   (barely-there fringe) through wm-t5 (solid core) — as currentColor, so
+   it adapts to either theme instead of needing a background-matched cutout. */
+.wm-t1 { fill: currentColor; fill-opacity: 0.20; }
+.wm-t2 { fill: currentColor; fill-opacity: 0.42; }
+.wm-t3 { fill: currentColor; fill-opacity: 0.65; }
+.wm-t4 { fill: currentColor; fill-opacity: 0.85; }
+.wm-t5 { fill: currentColor; fill-opacity: 1; }
 .brand-mark { height: 22px; width: auto; color: var(--text); }
 
 .header-actions { display: flex; align-items: center; gap: 6px; }
