@@ -10,8 +10,18 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Comfortaa:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>
+  // Applied before first paint so a saved "light" choice never flashes
+  // dark on reload — the rest of the toggle logic lives in script.js.
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved === "light") document.documentElement.setAttribute("data-theme", "light");
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body>
 
@@ -20,12 +30,19 @@
 <header class="site-header" id="top">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Chaos Designs home">
-      <img src="assets/img/logo-light.png" alt="Chaos Designs" class="brand-mark">
+      <span class="wordmark brand-mark">Chaos Designs</span>
     </a>
 
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </button>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
 
     <nav class="primary-nav" id="primaryNav">
       <a href="#services">Services</a>
@@ -41,7 +58,7 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <p class="eyebrow reveal">Independent software &amp; design studio</p>
-      <img src="assets/img/logo-light@3x.png" alt="Chaos Designs" class="hero-logo reveal">
+      <h1 class="wordmark hero-logo reveal">Chaos Designs</h1>
       <p class="hero-sub reveal">We design and build small, sharp software — clean interfaces, honest tools,
         and the occasional big idea. No bloat, no accounts you don't need, no nonsense.</p>
       <div class="hero-actions reveal">
@@ -227,7 +244,7 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <img src="assets/img/logo-light.png" alt="Chaos Designs" class="footer-mark">
+    <span class="wordmark footer-mark">Chaos Designs</span>
     <p>© <span id="year"></span> Chaos Designs. All rights reserved.</p>
   </div>
 </footer>

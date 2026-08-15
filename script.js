@@ -18,6 +18,27 @@
     });
   }
 
+  var themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    var setLabel = function () {
+      var isLight = document.documentElement.getAttribute("data-theme") === "light";
+      themeToggle.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
+    };
+    setLabel();
+    themeToggle.addEventListener("click", function () {
+      var isLight = document.documentElement.getAttribute("data-theme") === "light";
+      if (isLight) {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+      try {
+        localStorage.setItem("theme", isLight ? "dark" : "light");
+      } catch (e) {}
+      setLabel();
+    });
+  }
+
   var hero = document.querySelector(".hero");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (hero && !reduceMotion && window.matchMedia("(hover: hover)").matches) {
