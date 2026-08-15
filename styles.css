@@ -1,18 +1,19 @@
 /* ---------- Tokens ---------- */
 :root {
-  --bg: #0a090e;
-  --bg-raised: #131019;
-  --surface: #16131d;
-  --line: rgba(255, 255, 255, 0.1);
-  --line-strong: rgba(255, 255, 255, 0.22);
-  --text: #f3f1f6;
-  --muted: #8d899b;
-  --muted-dim: #625d70;
-  --accent: #ff6b4a;
-  --accent-dim: #d95335;
-  --violet: #7c5cff;
-  --teal: #21d6c4;
-  --gradient-brand: linear-gradient(90deg, var(--violet), var(--accent), var(--teal));
+  --bg: #120e19;
+  --bg-raised: #1c1526;
+  --surface: #201a2c;
+  --line: rgba(230, 224, 245, 0.1);
+  --line-strong: rgba(230, 224, 245, 0.24);
+  --text: #f4f1fa;
+  --muted: #9c90af;
+  --muted-dim: #6b6080;
+  --accent: #c77dff;
+  --accent-dim: #a855f7;
+  --violet: #9d4edd;
+  --teal: #c9a0dc;
+  --byzantium: #702963;
+  --gradient-brand: linear-gradient(90deg, var(--teal), var(--accent), var(--byzantium));
   --radius: 2px;
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -53,7 +54,7 @@ button { font: inherit; }
 
 .skip-link {
   position: absolute; left: -999px; top: 0; z-index: 200;
-  background: var(--accent); color: #0a090e; padding: 12px 18px; font-weight: 700;
+  background: var(--accent); color: var(--bg); padding: 12px 18px; font-weight: 700;
 }
 .skip-link:focus { left: 0; }
 
@@ -66,7 +67,7 @@ button { font: inherit; }
   transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
   white-space: nowrap;
 }
-.btn-primary { background: var(--accent); color: #0a090e; }
+.btn-primary { background: var(--accent); color: var(--bg); }
 .btn-primary:hover { background: #ffffff; transform: translateY(-2px); }
 .btn-ghost { background: transparent; color: var(--text); border-color: var(--line-strong); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
@@ -75,7 +76,7 @@ button { font: inherit; }
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(10, 9, 14, 0.72);
+  background: rgba(18, 14, 25, 0.72);
   backdrop-filter: saturate(160%) blur(14px);
   -webkit-backdrop-filter: saturate(160%) blur(14px);
   border-bottom: 1px solid var(--line);
@@ -90,7 +91,7 @@ button { font: inherit; }
 }
 .primary-nav a:hover { color: var(--text); }
 .nav-cta {
-  background: var(--text); color: #0a090e !important;
+  background: var(--text); color: var(--bg) !important;
   padding: 10px 22px; border-radius: var(--radius);
   transition: background-color 0.15s ease, transform 0.15s ease;
 }
@@ -114,8 +115,8 @@ button { font: inherit; }
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
-    radial-gradient(46% 60% at var(--mx, 78%) var(--my, 10%), rgba(255, 107, 74, 0.16), transparent 68%),
-    radial-gradient(34% 50% at 6% 92%, rgba(124, 92, 255, 0.14), transparent 70%);
+    radial-gradient(46% 60% at var(--mx, 78%) var(--my, 10%), rgba(199, 125, 255, 0.18), transparent 68%),
+    radial-gradient(34% 50% at 6% 92%, rgba(112, 41, 99, 0.28), transparent 70%);
   transition: background 0.4s ease;
 }
 .hero::after {
@@ -222,8 +223,8 @@ button { font: inherit; }
   font-weight: 700; font-size: 0.92rem;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
-.dl-btn:hover { background: var(--accent); color: #0a090e; }
-.dl-btn:hover .dl-file { color: #0a090e; opacity: 0.7; }
+.dl-btn:hover { background: var(--accent); color: var(--bg); }
+.dl-btn:hover .dl-file { color: var(--bg); opacity: 0.7; }
 .dl-file { color: var(--muted); font-weight: 500; font-size: 0.82rem; }
 .dl-btn-pending { color: var(--muted-dim); cursor: default; background: var(--bg); }
 .dl-btn-pending:hover { background: var(--bg); color: var(--muted-dim); }
@@ -235,7 +236,7 @@ button { font: inherit; }
 }
 .contact::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background: radial-gradient(50% 90% at 50% 100%, rgba(255, 107, 74, 0.14), transparent 70%);
+  background: radial-gradient(50% 90% at 50% 100%, rgba(199, 125, 255, 0.16), transparent 70%);
 }
 .contact-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
 .contact h2 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); margin-bottom: 18px; }
