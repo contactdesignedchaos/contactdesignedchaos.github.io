@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Illustrations — Chaos Designs</title>
+<meta name="description" content="Character art and style studies from the Chaos Designs illustration practice.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  // Applied before first paint so a saved "light" choice never flashes
+  // dark on reload — the rest of the toggle logic lives in script.js.
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved === "light") document.documentElement.setAttribute("data-theme", "light");
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<div class="ambient-glow" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Chaos Designs home">
+      <img class="logo-wordmark brand-mark logo-img-dark" src="assets/img/logo-wordmark-dark.png" alt="Chaos Designs">
+      <img class="logo-wordmark brand-mark logo-img-light" src="assets/img/logo-wordmark-light.png" alt="Chaos Designs">
+    </a>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </button>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="primary-nav" id="primaryNav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#utilities">Utilities</a>
+      <a href="index.html#contact" class="nav-cta">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="portfolio" style="padding-top: 70px;">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Portfolio</p>
+        <h2>Illustrations</h2>
+        <p class="section-sub">Character art and style studies from our illustration practice. Tap a title to view.</p>
+      </div>
+      <div class="gallery-grid">
+        <button type="button" class="gallery-item glass-panel reveal" data-src="assets/portfolio/spectrum-tree.webp" data-alt="Spectrum Tree — a stylized tree illustration with a rainbow-gradient canopy">
+          <span class="gallery-caption">Spectrum Tree</span>
+        </button>
+        <button type="button" class="gallery-item glass-panel reveal" data-src="assets/portfolio/tangled-roots.webp" data-alt="Tangled Roots — a fine-line pen and ink study of gnarled tree roots">
+          <span class="gallery-caption">Tangled Roots</span>
+        </button>
+        <button type="button" class="gallery-item glass-panel reveal" data-src="assets/portfolio/streetwear-skull.webp" data-alt="Streetwear Skull — a bold red and white skull graphic for apparel">
+          <span class="gallery-caption">Streetwear Skull</span>
+        </button>
+        <button type="button" class="gallery-item glass-panel reveal" data-src="assets/portfolio/fractured-lion.webp" data-alt="Fractured Pride — a low-poly geometric lion portrait">
+          <span class="gallery-caption">Fractured Pride</span>
+        </button>
+        <button type="button" class="gallery-item glass-panel reveal" data-src="assets/portfolio/cool-cat.webp" data-alt="Cool Cat — a vividly colored lion character wearing sunglasses">
+          <span class="gallery-caption">Cool Cat</span>
+        </button>
+        <button type="button" class="gallery-item glass-panel reveal" data-src="assets/portfolio/prism-wolf.webp" data-alt="Prism Wolf — a geometric wildlife portrait of a wolf in vivid color">
+          <span class="gallery-caption">Prism Wolf</span>
+        </button>
+      </div>
+
+      <p class="reveal" style="margin-top: 56px; text-align: center;">
+        <a class="btn btn-ghost" href="index.html#portfolio">← Back to portfolio</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <img class="logo-wordmark footer-mark logo-img-dark" src="assets/img/logo-wordmark-dark.png" alt="Chaos Designs">
+    <img class="logo-wordmark footer-mark logo-img-light" src="assets/img/logo-wordmark-light.png" alt="Chaos Designs">
+    <p>© <span id="year"></span> Chaos Designs. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
