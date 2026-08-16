@@ -111,6 +111,20 @@
       <div class="grid services-grid">
         <div class="card glass-panel service-card reveal">
           <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="2.5"/><path d="M17 27c2 3 5 4 7 4s5-1 7-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="19" cy="20" r="1.6" fill="currentColor"/><circle cx="29" cy="20" r="1.6" fill="currentColor"/></svg>
+          </div>
+          <h3>Brand &amp; Icon Design</h3>
+          <p>Wordmarks, app icons, and small visual systems built to hold up at every size — from a favicon to a store listing.</p>
+        </div>
+        <div class="card glass-panel service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 10h32a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H20l-8 8v-8h-4a2 2 0 0 1-2-2V12a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 20h16M16 26h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Consulting</h3>
+          <p>An outside read on product decisions, tech stack choices, and build-vs-buy calls — before you commit engineering time to the wrong one.</p>
+        </div>
+        <div class="card glass-panel service-card reveal">
+          <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
           </div>
           <h3>Product Design</h3>
@@ -122,20 +136,6 @@
           </div>
           <h3>Cross-Platform Apps</h3>
           <p>One codebase, five platforms — Android, iOS, Windows, macOS, and Linux — built with Flutter so nothing gets left behind.</p>
-        </div>
-        <div class="card glass-panel service-card reveal">
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="2.5"/><path d="M17 27c2 3 5 4 7 4s5-1 7-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="19" cy="20" r="1.6" fill="currentColor"/><circle cx="29" cy="20" r="1.6" fill="currentColor"/></svg>
-          </div>
-          <h3>Brand &amp; Icon Design</h3>
-          <p>Wordmarks, app icons, and small visual systems built to hold up at every size — from a favicon to a store listing.</p>
-        </div>
-        <div class="card glass-panel service-card reveal">
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6v8M24 34v8M6 24h8M34 24h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="2.5"/></svg>
-          </div>
-          <h3>Open-Source &amp; CI/CD</h3>
-          <p>Automated build pipelines and store-ready release processes — so shipping an update is a push, not a project.</p>
         </div>
       </div>
     </div>
@@ -152,15 +152,7 @@
           <img src="assets/img/icon-easytransfer.png" alt="" class="portfolio-icon">
           <div class="portfolio-body">
             <h3>easyTransfer</h3>
-            <p>Cross-platform file transfer over local Wi-Fi. No cables, no cloud, no account.</p>
-          </div>
-          <span class="portfolio-link">View project →</span>
-        </a>
-        <a class="card glass-panel portfolio-card reveal" href="#util-easytransfer-ec">
-          <img src="assets/img/icon-easytransfer-ec.png" alt="" class="portfolio-icon">
-          <div class="portfolio-body">
-            <h3>easyTransfer EC</h3>
-            <p>The internet-reaching sibling — peer-to-peer file transfer over mobile data or any network.</p>
+            <p>Cross-platform file transfer over local Wi-Fi or the internet. No cables, no cloud, no account.</p>
           </div>
           <span class="portfolio-link">View project →</span>
         </a>
@@ -182,6 +174,7 @@
         <p class="kicker">Free &amp; open</p>
         <h2>Utilities</h2>
         <p class="section-sub">Tools we've built and published ourselves. No accounts, no ads, no catch — download and go.</p>
+        <p class="testing-note">These apps are still in testing — expect rough edges, and let us know what breaks at <a href="mailto:contactdesignedchaos@gmail.com">contactdesignedchaos@gmail.com</a>.</p>
       </div>
 
       <article class="util-card glass-panel reveal" id="util-easytransfer">
@@ -189,7 +182,7 @@
           <img src="assets/img/icon-easytransfer.png" alt="" class="util-icon">
           <div>
             <h3>easyTransfer</h3>
-            <p class="util-tagline">Send files over Wi-Fi. No cables, no cloud, no account.</p>
+            <p class="util-tagline">Send files over Wi-Fi or the internet. No cables, no cloud storage, no account.</p>
           </div>
         </div>
 
@@ -198,7 +191,7 @@
             <h4>How it works</h4>
             <ol>
               <li><strong>Receive</strong> — open the app on one device and tap Receive; it shows a QR code.</li>
-              <li><strong>Send</strong> — on the other device, tap Send and scan that code.</li>
+              <li><strong>Send</strong> — on the other device, tap Send and scan that code. Same Wi-Fi or not, it connects automatically.</li>
               <li><strong>Accept &amp; go</strong> — the receiver taps Accept, the sender picks files, and they land straight in Downloads.</li>
             </ol>
           </div>
@@ -221,44 +214,13 @@
             </div>
           </div>
         </div>
-      </article>
 
-      <article class="util-card glass-panel reveal" id="util-easytransfer-ec">
-        <div class="util-head">
-          <img src="assets/img/icon-easytransfer-ec.png" alt="" class="util-icon">
-          <div>
-            <h3>easyTransfer EC</h3>
-            <p class="util-tagline">Send files over the internet. Mobile data, different networks — anywhere.</p>
-          </div>
-        </div>
-
-        <div class="util-body">
-          <div class="util-how">
-            <h4>How it works</h4>
-            <ol>
-              <li><strong>Receive</strong> — open the app on one device and tap Receive; it shows a QR code.</li>
-              <li><strong>Send</strong> — on the other device, anywhere with a connection, tap Send and scan that code.</li>
-              <li><strong>Accept &amp; go</strong> — the receiver taps Accept, the sender picks files, and they transfer end-to-end encrypted, direct when possible.</li>
-            </ol>
-          </div>
-
-          <div class="util-downloads">
-            <h4>Download</h4>
-            <div class="download-grid">
-              <a class="dl-btn" href="https://github.com/contactdesignedchaos/easyTransfer-EC-releases/releases/download/v1.0.1/app-release.apk">
-                <span class="dl-platform">Android</span><span class="dl-file">.apk</span>
-              </a>
-              <a class="dl-btn" href="https://github.com/contactdesignedchaos/easyTransfer-EC-releases/releases/download/v1.0.1/easyTransferEC-windows.zip">
-                <span class="dl-platform">Windows</span><span class="dl-file">.zip</span>
-              </a>
-              <a class="dl-btn" href="https://github.com/contactdesignedchaos/easyTransfer-EC-releases/releases/download/v1.0.1/easyTransferEC-macos.zip">
-                <span class="dl-platform">macOS</span><span class="dl-file">.zip</span>
-              </a>
-              <a class="dl-btn" href="https://github.com/contactdesignedchaos/easyTransfer-EC-releases/releases/download/v1.0.1/easyTransferEC-linux.tar.gz">
-                <span class="dl-platform">Linux</span><span class="dl-file">.tar.gz</span>
-              </a>
-            </div>
-          </div>
+        <div class="util-interest">
+          <button class="interest-btn" type="button" data-utility="easytransfer" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10v10H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h3Zm0 0 4.5-7a2 2 0 0 1 3.6 1.4L14 9h4.5a2 2 0 0 1 1.9 2.7l-2.4 7A2 2 0 0 1 16.1 20H10a3 3 0 0 1-3-3v-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span class="interest-label">Interested in this?</span>
+          </button>
+          <span class="interest-count" data-utility="easytransfer" aria-live="polite"></span>
         </div>
       </article>
     </div>
@@ -267,8 +229,8 @@
   <section class="stats">
     <div class="wrap stats-grid reveal">
       <div class="stat glass-panel">
-        <span class="stat-num">2</span>
-        <span class="stat-label">Apps shipped</span>
+        <span class="stat-num">1</span>
+        <span class="stat-label">App shipped</span>
       </div>
       <div class="stat glass-panel">
         <span class="stat-num">5</span>
